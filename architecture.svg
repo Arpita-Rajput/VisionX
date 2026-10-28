@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1260" viewBox="0 0 1800 1260" role="img" aria-labelledby="title desc">
+  <title id="title">Vision-Language Intelligence System for Prompt-Driven Multi-Camera Video Understanding</title>
+  <desc id="desc">A left-to-right software architecture showing camera sources, stream management, YOLO detection, event processing, user prompts, vision-language intelligence, monitoring decisions, outputs, and the Python modules implementing each stage.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#334155"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#0f766e"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      .title { font: 700 30px Georgia, 'Times New Roman', serif; fill: #102a43; letter-spacing: 0; }
+      .subtitle { font: 400 15px Arial, Helvetica, sans-serif; fill: #52606d; }
+      .layer-title { font: 700 16px Arial, Helvetica, sans-serif; fill: #102a43; }
+      .item { font: 400 14px Arial, Helvetica, sans-serif; fill: #243b53; }
+      .small { font: 400 13px Arial, Helvetica, sans-serif; fill: #52606d; }
+      .flow-label { font: 600 13px Arial, Helvetica, sans-serif; fill: #52606d; }
+      .box { stroke-width: 1.5; }
+      .bullet { fill: #0f766e; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1260" fill="#f7fafc"/>
+  <rect x="30" y="25" width="1740" height="1230" rx="16" fill="#ffffff" stroke="#d9e2ec" stroke-width="1.5"/>
+
+  <text x="900" y="75" text-anchor="middle" class="title">Vision-Language Intelligence System</text>
+  <text x="900" y="103" text-anchor="middle" class="subtitle">Prompt-Driven Multi-Camera Video Understanding</text>
+
+  <!-- Main data-flow connectors -->
+  <g fill="none" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)">
+    <path d="M 205 375 H 240"/>
+    <path d="M 425 375 H 460"/>
+    <path d="M 645 375 H 680"/>
+    <path d="M 865 375 H 900"/>
+    <path d="M 1085 375 H 1120"/>
+    <path d="M 1305 375 H 1340"/>
+    <path d="M 1525 375 H 1560"/>
+  </g>
+
+  <g class="flow-label">
+    <text x="222" y="354" text-anchor="middle">streams</text>
+    <text x="442" y="354" text-anchor="middle">frames</text>
+    <text x="662" y="354" text-anchor="middle">detections</text>
+    <text x="882" y="354" text-anchor="middle">events</text>
+    <text x="1102" y="354" text-anchor="middle">context</text>
+    <text x="1322" y="354" text-anchor="middle">decisions</text>
+    <text x="1542" y="354" text-anchor="middle">results</text>
+  </g>
+
+  <!-- Camera sources -->
+  <g filter="url(#shadow)">
+    <rect x="65" y="220" width="140" height="310" rx="10" fill="#e8f1f5" stroke="#8fb8c5" class="box"/>
+    <rect x="65" y="220" width="140" height="54" rx="10" fill="#d7e9ee"/>
+  </g>
+  <text x="135" y="244" text-anchor="middle" class="layer-title">Camera</text>
+  <text x="135" y="263" text-anchor="middle" class="layer-title">Sources</text>
+  <g class="item">
+    <circle cx="86" cy="313" r="4" class="bullet"/><text x="98" y="318">Laptop / Webcam</text>
+    <circle cx="86" cy="365" r="4" class="bullet"/><text x="98" y="370">CCTV / RTSP</text><text x="98" y="389">Streams</text>
+    <circle cx="86" cy="441" r="4" class="bullet"/><text x="98" y="446">Multiple Camera</text><text x="98" y="465">Streams</text>
+  </g>
+  <text x="135" y="505" text-anchor="middle" class="small">one or many inputs</text>
+
+  <!-- Stream manager -->
+  <g filter="url(#shadow)">
+    <rect x="240" y="220" width="185" height="310" rx="10" fill="#edf4fb" stroke="#8aafd0" class="box"/>
+    <rect x="240" y="220" width="185" height="54" rx="10" fill="#deebf7"/>
+  </g>
+  <text x="332" y="244" text-anchor="middle" class="layer-title">Multi-Camera</text>
+  <text x="332" y="263" text-anchor="middle" class="layer-title">Stream Manager</text>
+  <g class="item">
+    <circle cx="261" cy="320" r="4" class="bullet"/><text x="273" y="325">Camera ID</text>
+    <circle cx="261" cy="376" r="4" class="bullet"/><text x="273" y="381">Stream Management</text>
+    <circle cx="261" cy="432" r="4" class="bullet"/><text x="273" y="437">Frame Capture</text>
+    <circle cx="261" cy="484" r="4" class="bullet"/><text x="273" y="489">Multiple Simultaneous</text><text x="273" y="508">Streams</text>
+  </g>
+
+  <!-- YOLO -->
+  <g filter="url(#shadow)">
+    <rect x="460" y="220" width="185" height="310" rx="10" fill="#fff6e6" stroke="#d4ad62" class="box"/>
+    <rect x="460" y="220" width="185" height="54" rx="10" fill="#ffedc7"/>
+  </g>
+  <text x="552" y="244" text-anchor="middle" class="layer-title">YOLO Object</text>
+  <text x="552" y="263" text-anchor="middle" class="layer-title">Detection Layer</text>
+  <g class="item">
+    <circle cx="481" cy="305" r="4" class="bullet"/><text x="493" y="310">Process Captured Frames</text>
+    <circle cx="481" cy="355" r="4" class="bullet"/><text x="493" y="360">Person Detection</text>
+    <circle cx="481" cy="405" r="4" class="bullet"/><text x="493" y="410">Object Detection</text>
+    <circle cx="481" cy="455" r="4" class="bullet"/><text x="493" y="460">Bounding Boxes</text>
+    <circle cx="481" cy="505" r="4" class="bullet"/><text x="493" y="510">Confidence Scores</text>
+  </g>
+
+  <!-- Detection and event processing -->
+  <g filter="url(#shadow)">
+    <rect x="680" y="220" width="185" height="310" rx="10" fill="#eef8f4" stroke="#83b9a5" class="box"/>
+    <rect x="680" y="220" width="185" height="54" rx="10" fill="#dff1e9"/>
+  </g>
+  <text x="772" y="244" text-anchor="middle" class="layer-title">Detection &amp; Event</text>
+  <text x="772" y="263" text-anchor="middle" class="layer-title">Processing Layer</text>
+  <g class="item">
+    <circle cx="701" cy="305" r="4" class="bullet"/><text x="713" y="310">Object Tracking</text>
+    <circle cx="701" cy="355" r="4" class="bullet"/><text x="713" y="360">Timestamp</text>
+    <circle cx="701" cy="405" r="4" class="bullet"/><text x="713" y="410">Detected Objects</text>
+    <circle cx="701" cy="455" r="4" class="bullet"/><text x="713" y="460">Basic Event Generation</text>
+    <circle cx="701" cy="505" r="4" class="bullet"/><text x="713" y="510">Structured Event Data</text>
+  </g>
+
+  <!-- Vision-language intelligence -->
+  <g filter="url(#shadow)">
+    <rect x="900" y="220" width="185" height="310" rx="10" fill="#f1effb" stroke="#9c91c8" class="box"/>
+    <rect x="900" y="220" width="185" height="54" rx="10" fill="#e7e3f6"/>
+  </g>
+  <text x="992" y="244" text-anchor="middle" class="layer-title">Vision-Language</text>
+  <text x="992" y="263" text-anchor="middle" class="layer-title">Intelligence Layer</text>
+  <g class="item">
+    <circle cx="921" cy="305" r="4" class="bullet"/><text x="933" y="310">Prompt Understanding</text>
+    <circle cx="921" cy="355" r="4" class="bullet"/><text x="933" y="360">Visual Context Analysis</text>
+    <circle cx="921" cy="405" r="4" class="bullet"/><text x="933" y="410">Reasoning</text>
+    <circle cx="921" cy="455" r="4" class="bullet"/><text x="933" y="460">Prompt + Detection</text><text x="933" y="479">Results</text>
+    <circle cx="921" cy="505" r="4" class="bullet"/><text x="933" y="510">Meaningful Interpretation</text>
+  </g>
+
+  <!-- Monitoring engine -->
+  <g filter="url(#shadow)">
+    <rect x="1120" y="220" width="185" height="310" rx="10" fill="#edf4fb" stroke="#8aafd0" class="box"/>
+    <rect x="1120" y="220" width="185" height="54" rx="10" fill="#deebf7"/>
+  </g>
+  <text x="1212" y="244" text-anchor="middle" class="layer-title">Monitoring /</text>
+  <text x="1212" y="263" text-anchor="middle" class="layer-title">Decision Engine</text>
+  <g class="item">
+    <circle cx="1141" cy="305" r="4" class="bullet"/><text x="1153" y="310">Camera-Specific</text><text x="1153" y="329">Monitoring Tasks</text>
+    <circle cx="1141" cy="380" r="4" class="bullet"/><text x="1153" y="385">Event Detection</text>
+    <circle cx="1141" cy="430" r="4" class="bullet"/><text x="1153" y="435">Condition Checking</text>
+    <circle cx="1141" cy="480" r="4" class="bullet"/><text x="1153" y="485">Maintain Tasks per Camera</text>
+    <circle cx="1141" cy="510" r="4" class="bullet"/><text x="1153" y="515">Decide Condition Satisfied</text>
+  </g>
+
+  <!-- Output -->
+  <g filter="url(#shadow)">
+    <rect x="1340" y="220" width="185" height="310" rx="10" fill="#fff1ee" stroke="#d69a8c" class="box"/>
+    <rect x="1340" y="220" width="185" height="54" rx="10" fill="#fce2dc"/>
+  </g>
+  <text x="1432" y="253" text-anchor="middle" class="layer-title">Output Layer</text>
+  <g class="item">
+    <circle cx="1361" cy="325" r="4" class="bullet"/><text x="1373" y="330">Monitoring Status</text>
+    <circle cx="1361" cy="377" r="4" class="bullet"/><text x="1373" y="382">Alerts</text>
+    <circle cx="1361" cy="429" r="4" class="bullet"/><text x="1373" y="434">Natural Language</text><text x="1373" y="453">Response</text>
+    <circle cx="1361" cy="481" r="4" class="bullet"/><text x="1373" y="486">Event Summary</text>
+  </g>
+
+  <!-- User prompt, intentionally below the processing flow -->
+  <g filter="url(#shadow)">
+    <rect x="715" y="650" width="520" height="190" rx="12" fill="#f0faf9" stroke="#0f766e" stroke-width="2"/>
+    <rect x="715" y="650" width="520" height="48" rx="12" fill="#d7f0ed"/>
+  </g>
+  <text x="975" y="680" text-anchor="middle" class="layer-title">User Prompt Layer</text>
+  <g class="item">
+    <circle cx="745" cy="730" r="4" class="bullet"/><text x="758" y="735">Natural Language Prompt</text>
+    <circle cx="745" cy="777" r="4" class="bullet"/><text x="758" y="782">Example:</text>
+    <!-- <text x="758" y="808" font:italic 14px Arial, Helvetica, sans-serif fill="#245e5a">“Monitor whether a person is sitting</text> -->
+    <!-- <text x="758" y="827" font:italic 14px Arial, Helvetica, sans-serif fill="#245e5a">near a laptop.”</text> -->
+    <text x="758" y="808" style="font: italic 14px Arial, Helvetica, sans-serif; fill: #245e5a;">“Monitor whether a person is sitting</text>
+    <text x="758" y="827" style="font: italic 14px Arial, Helvetica, sans-serif; fill: #245e5a;">near a laptop.”</text>
+    <text x="1015" y="735" class="small" text-anchor="middle">defines what to monitor for</text>
+    <text x="1015" y="754" class="small" text-anchor="middle">a particular camera</text>
+  </g>
+
+  <!-- Prompt controls the intelligence layer -->
+  <path d="M 975 650 V 570 C 975 550 992 540 1010 540 V 530" fill="none" stroke="#0f766e" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrow-accent)"/>
+  <text x="1018" y="588" class="flow-label" fill="#0f766e">controls what to monitor</text>
+
+  <!-- Visual grouping and scope note -->
+  <path d="M 65 585 H 1525" fill="none" stroke="#d9e2ec" stroke-width="1"/>
+  <text x="795" y="620" text-anchor="middle" class="small">Prompt-guided interpretation and camera-specific monitoring</text>
+  <text x="900" y="900" text-anchor="middle" class="small">Shared pipeline: one or many camera streams can be processed by the same codebase.</text>
+
+  <!-- Code implementation layer -->
+  <rect x="65" y="955" width="1670" height="245" rx="12" fill="#f8fafc" stroke="#52606d" stroke-width="1.5"/>
+  <rect x="65" y="955" width="1670" height="48" rx="12" fill="#e5e7eb"/>
+  <text x="900" y="986" text-anchor="middle" class="layer-title">Code Implementation: Python Modules</text>
+  <text x="900" y="1025" text-anchor="middle" class="small">Each architecture component is implemented as a focused module with defined inputs and outputs.</text>
+
+  <!-- Module mapping connectors -->
+  <g fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 5">
+    <path d="M 135 530 V 930 H 170 V 955"/>
+    <path d="M 332 530 V 930 H 385 V 955"/>
+    <path d="M 552 530 V 930 H 610 V 955"/>
+    <path d="M 772 530 V 930 H 835 V 955"/>
+    <path d="M 992 530 V 930 H 1060 V 955"/>
+    <path d="M 1212 530 V 930 H 1285 V 955"/>
+    <path d="M 1432 530 V 930 H 1510 V 955"/>
+    <path d="M 975 840 V 920 H 850 V 955"/>
+  </g>
+
+  <!-- Module cards -->
+  <g class="small">
+    <rect x="90" y="1050" width="210" height="125" rx="8" fill="#e8f1f5" stroke="#8fb8c5"/>
+    <text x="105" y="1074" class="layer-title">camera/</text>
+    <text x="105" y="1100">camera_manager.py</text>
+    <text x="105" y="1121">stream.py</text>
+    <text x="105" y="1153" fill="#0f766e">streams / frames</text>
+
+    <rect x="315" y="1050" width="210" height="125" rx="8" fill="#edf4fb" stroke="#8aafd0"/>
+    <text x="330" y="1074" class="layer-title">detection/</text>
+    <text x="330" y="1100">yolo_detector.py</text>
+    <text x="330" y="1121">model_selector.py</text>
+    <text x="330" y="1153" fill="#0f766e">frames / detections</text>
+
+    <rect x="540" y="1050" width="210" height="125" rx="8" fill="#fff6e6" stroke="#d4ad62"/>
+    <text x="555" y="1074" class="layer-title">processing/</text>
+    <text x="555" y="1100">event_processor.py</text>
+    <text x="555" y="1121">tracker.py</text>
+    <text x="555" y="1153" fill="#0f766e">detections / events</text>
+
+    <rect x="765" y="1050" width="170" height="125" rx="8" fill="#f0faf9" stroke="#0f766e"/>
+    <text x="780" y="1074" class="layer-title">prompting/</text>
+    <text x="780" y="1100">prompt_parser.py</text>
+    <text x="780" y="1153" fill="#0f766e">prompt / task spec</text>
+
+    <rect x="950" y="1050" width="210" height="125" rx="8" fill="#f1effb" stroke="#9c91c8"/>
+    <text x="965" y="1074" class="layer-title">vlm/</text>
+    <text x="965" y="1100">vision_language_model.py</text>
+    <text x="965" y="1153" fill="#0f766e">prompt + events / context</text>
+
+    <rect x="1175" y="1050" width="210" height="125" rx="8" fill="#edf4fb" stroke="#8aafd0"/>
+    <text x="1190" y="1074" class="layer-title">monitoring/</text>
+    <text x="1190" y="1100">monitoring_engine.py</text>
+    <text x="1190" y="1121">task_manager.py</text>
+    <text x="1190" y="1153" fill="#0f766e">context / decisions</text>
+
+    <rect x="1400" y="1050" width="310" height="125" rx="8" fill="#fff1ee" stroke="#d69a8c"/>
+    <text x="1415" y="1074" class="layer-title">output/</text>
+    <text x="1415" y="1100">response_generator.py</text>
+    <text x="1415" y="1121">alert_manager.py</text>
+    <text x="1415" y="1153" fill="#0f766e">decisions / responses + alerts</text>
+  </g>
+
+  <!-- Direction cue -->
+  <path d="M 90 150 H 1690" fill="none" stroke="#9fb3c8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="90" y="140" class="flow-label">input</text>
+  <text x="1690" y="140" text-anchor="end" class="flow-label">interpretable monitoring output</text>
+</svg>
