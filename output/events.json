@@ -1,1 +1,315 @@
-[]
+[
+    {
+        "camera_id": 1,
+        "track_id": 1,
+        "class_name": "person",
+        "event": "restricted_area_dwell_time",
+        "message": "Person stayed in restricted area for 10.01 seconds",
+        "timestamp": "2026-11-19T11:42:31.897245",
+        "duration_seconds": 10.01
+    },
+    {
+        "camera_id": 1,
+        "track_id": 1,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 11:52 AM",
+        "timestamp": "2026-11-19T11:52:05.943892"
+    },
+    {
+        "camera_id": 1,
+        "track_id": 16,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 11:52 AM",
+        "timestamp": "2026-11-19T11:52:08.362961"
+    },
+    {
+        "camera_id": 1,
+        "track_id": 1,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 11:52 AM",
+        "timestamp": "2026-11-19T11:52:11.387290"
+    },
+    {
+        "camera_id": 1,
+        "track_id": 1,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 11:52 AM",
+        "timestamp": "2026-11-19T11:52:17.800734"
+    },
+    {
+        "camera_id": 1,
+        "track_id": 49,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 11:52 AM",
+        "timestamp": "2026-11-19T11:52:29.723655"
+    },
+    {
+        "camera_id": 1,
+        "track_id": 1,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:11 PM",
+        "timestamp": "2026-11-19T18:11:58.574042"
+    },
+    {
+        "camera_id": 1,
+        "track_id": 1,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:12 PM",
+        "timestamp": "2026-11-19T18:12:28.975198"
+    },
+    {
+        "camera_id": 1,
+        "track_id": 2,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:12 PM",
+        "timestamp": "2026-11-19T18:12:32.701559"
+    },
+    {
+        "camera_id": 1,
+        "track_id": 1,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:21:58 PM",
+        "timestamp": "2026-11-19T18:21:58.339896",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 10,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:22:06 PM",
+        "timestamp": "2026-11-19T18:22:06.355463",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 22,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:22:21 PM",
+        "timestamp": "2026-11-19T18:22:21.766572",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 33,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:22:31 PM",
+        "timestamp": "2026-11-19T18:22:31.174641",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 40,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:22:41 PM",
+        "timestamp": "2026-11-19T18:22:41.160420",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 53,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:23:14 PM",
+        "timestamp": "2026-11-19T18:23:14.167572",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 54,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:23:14 PM",
+        "timestamp": "2026-11-19T18:23:14.325664",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 62,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:23:19 PM",
+        "timestamp": "2026-11-19T18:23:19.041809",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 78,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:23:45 PM",
+        "timestamp": "2026-11-19T18:23:45.838464",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 1,
+        "class_name": "person",
+        "event": "loitering_alert",
+        "message": "Person has stayed in the restricted area for 120.05 seconds",
+        "timestamp": "2026-11-19T18:23:58.386985",
+        "duration_seconds": 120.05,
+        "entry_timestamp": "2026-11-19T18:21:58.339896"
+    },
+    {
+        "camera_id": 1,
+        "track_id": 79,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:24:03 PM",
+        "timestamp": "2026-11-19T18:24:03.006917",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 101,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:24:35 PM",
+        "timestamp": "2026-11-19T18:24:35.255345",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 1,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:31:06 PM",
+        "timestamp": "2026-11-19T18:31:06.352012",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 6,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:31:08 PM",
+        "timestamp": "2026-11-19T18:31:08.013477",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 13,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:31:09 PM",
+        "timestamp": "2026-11-19T18:31:09.371634",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 1,
+        "class_name": "person",
+        "event": "restricted_area_exit",
+        "message": "Person exited the restricted area at 06:31:09 PM",
+        "timestamp": "2026-11-19T18:31:09.817578",
+        "duration_seconds": 3.47,
+        "entry_timestamp": "2026-11-19T18:31:06.352012"
+    },
+    {
+        "camera_id": 1,
+        "track_id": 33,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:31:31 PM",
+        "timestamp": "2026-11-19T18:31:31.253611",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 33,
+        "class_name": "person",
+        "event": "restricted_area_exit",
+        "message": "Person exited the restricted area at 06:31:32 PM",
+        "timestamp": "2026-11-19T18:31:32.185544",
+        "duration_seconds": 0.94,
+        "entry_timestamp": "2026-11-19T18:31:31.253611"
+    },
+    {
+        "camera_id": 1,
+        "track_id": 33,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:31:32 PM",
+        "timestamp": "2026-11-19T18:31:32.417542",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 33,
+        "class_name": "person",
+        "event": "restricted_area_exit",
+        "message": "Person exited the restricted area at 06:31:32 PM",
+        "timestamp": "2026-11-19T18:31:32.895553",
+        "duration_seconds": 0.48,
+        "entry_timestamp": "2026-11-19T18:31:32.417542"
+    },
+    {
+        "camera_id": 1,
+        "track_id": 41,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:31:33 PM",
+        "timestamp": "2026-11-19T18:31:33.009712",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 1,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:38:21 PM",
+        "timestamp": "2026-11-22T18:38:21.039429",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 10,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:38:31 PM",
+        "timestamp": "2026-11-22T18:38:31.183482",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    },
+    {
+        "camera_id": 1,
+        "track_id": 41,
+        "class_name": "person",
+        "event": "restricted_area_entry",
+        "message": "Person entered the restricted area at 06:39:04 PM",
+        "timestamp": "2026-11-22T18:39:04.532496",
+        "duration_seconds": null,
+        "entry_timestamp": null
+    }
+]
